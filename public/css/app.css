@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+body {
+  background: url(https://www.collectingoldmaps.com/Images/slides/slide5.jpg);
+  margin: 0;
+  font-family: 'Dancing Script', cursive;
+  text-align: center;
+
+}
+
+h1 {
+  font-family: 'Dancing Script', cursive;
+  margin:0;
+  text-shadow: 3px 3px 3px rgb(176, 106, 1);
+  margin-bottom: .5em;
+  padding: 1em;
+  text-align: center;
+}
+
+a {
+  color: rgb(2, 1, 0);
+  text-decoration: none;
+  text-shadow: 1px 1px 1px rgb(0, 0, 0);
+  font-size: 1.5em;
+  background: rgba(255, 184, 4, 0.9);
+}
+
+a:hover {
+  color: ghostwhite;
+}
+
+li {
+  list-style: none;
+  color: rgb(255, 234, 7);
+  text-shadow: 3px 3px 3px black;
+  font-family: 'Open Sans', sans-serif;
+  text-align: left;
+
+}
+
+li a {
+  color: rgb(0, 0, 0);
+  text-shadow: 3px 3px 3px rgb(176, 106, 1);
+
+}
+
+input[type=text] {
+  padding: .3em;
+}
+
+input[type=submit] {
+  padding: .3em;
+  color: rgb(0, 0, 0);
+  background: rgb(215, 152, 5);
+  font-size: 1em;
+  border-radius: 10%;
+}
+form{
+  text-shadow: 3px 3px 3px rgb(176, 106, 1);
+}
+p{
+  text-shadow: 3px 3px 3px rgb(176, 106, 1);
+  font-size: large;
+}

@@ -44,6 +44,36 @@ const dataController = {
     },
     // Create
     create(req, res, next){
+        req.body.shipIsBroken = req.body.shipIsBroken === 'on' ? true : false;
+        Log.create(req.body, (err, createdLog) => {
+            if(err){
+                res.status(400).send({
+                    msg: err.message
+                })
+            } else {
+                res.locals.data.log = createdLog
+                console.log(createdLog)
+                next()
+            }
+        })
+    },
+    // Edit
+    // edit (req, res)
+    // Show
+    show(req, res, next){
+        Log.findById(req.params.id, (err, foundLog) => {
+            if(err){
+                res.status(400).send({
+                    msg: err.message,
+                    output: `could not find a Log with that ID`
+                })
+            } else {
+                res.locals.data.log = foundLog
 
+                next()
+            }
+        })
     }
+
 }
+module.exports = dataController

@@ -1,7 +1,7 @@
 const RESOURCE_PATH = '/logs'
 
 const viewController = {
-    index(res, res, next){
+    index(req, res, next){
         res.render('logs/Index', res.locals.data)
     },
     newView(req, res, next){
@@ -11,11 +11,16 @@ const viewController = {
         res.render('logs/Edit', res.locals.data)
     },
     show(req, res, next){
-        res.render('logs/Show', res.locsls.data)
+        res.render('logs/Show', res.locals.data)
     },
     redirectHome(req, res, next){
-        const logId = req.res.id || res.locals.data.log._id
+        res.redirect(RESOURCE_PATH)
+    },
+    redirectShow(req, res, next){
+        const logId = req.params.id || res.locals.data.log._id
         res.redirect(`${RESOURCE_PATH}/${logId}`)
     }
+
 }
+
 module.exports = viewController
